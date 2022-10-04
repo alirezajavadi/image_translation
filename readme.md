@@ -10,7 +10,8 @@
     - `pip install -r requirements.txt`
 - Run!
     - `python main.py`
-#Support
+    
+# Support
 - Image file formats:
     - .png
     - .jpeg
