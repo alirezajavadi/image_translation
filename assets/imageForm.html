@@ -1,0 +1,96 @@
+<style>
+    .mainContainer {
+        background-color: #eee;
+        padding: 24px;
+    }
+
+    input[type=file]::file-selector-button, label, select {
+        border: #262626 1px solid;
+        padding: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #e7e7e7;
+
+    }
+
+    input[type=file]::file-selector-button:hover, label:hover select:hover {
+        background-color: #e0e0e0;
+    }
+
+    .right {
+        width: 350px;
+    }
+
+    .childContainer {
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+    }
+
+    label[disabled="disabled"] {
+        background-color: #f1f1f1;
+        border: #535353 1px solid;
+        color: #5a5a5a;
+        cursor: auto;
+    }
+</style>
+
+<div class="mainContainer">
+    <div class="childContainer">
+        <span style="padding:14px;" class="left">1-Upload File.</span>
+        <input id="uploadImg" onchange="imageSelected();" class="right" type="file"
+               accept="image/gif, image/jpeg, image/tiff, image/png, image/bmp" value="Select Image...">
+        <img id="base64image" src="#" alt="your image" style="display:none;"/>
+    </div>
+    <div class="childContainer">
+        <span style="padding:14px;" class="left">2-Select Language.</span>
+        <select id="lang" class="right" name="lang">
+            <option value="ara">Arabic</option>
+            <option value="bul">Bulgarian</option>
+            <option value="chs">Chinese(Simplified)</option>
+            <option value="cht">Chinese(Traditional)</option>
+            <option value="hrv">Croatian</option>
+            <option value="cze">Czech</option>
+            <option value="dan">Danish</option>
+            <option value="dut">Dutch</option>
+            <option value="eng" selected="selected">English</option>
+            <option value="fin">Finnish</option>
+            <option value="fre">French</option>
+            <option value="ger">German</option>
+            <option value="gre">Greek</option>
+            <option value="hun">Hungarian</option>
+            <option value="kor">Korean</option>
+            <option value="ita">Italian</option>
+            <option value="jpn">Japanese</option>
+            <option value="pol">Polish</option>
+            <option value="por">Portuguese</option>
+            <option value="rus">Russian</option>
+            <option value="slv">Slovenian</option>
+            <option value="spa">Spanish</option>
+            <option value="swe">Swedish</option>
+            <option value="tur">Turkish</option>
+        </select>
+    </div>
+
+    <div class="childContainer">
+        <span style="padding:14px;" class="left">3-Translate.</span>
+
+        <label for="translate" class="right" disabled="disabled" id="translateLabel">
+            Translate
+        </label>
+        <input type="checkbox" id="translate" style="display: none">
+
+    </div>
+
+    <p style="font-size: 16px;text-align: center;color: red; display: none" id="error">
+
+    </p>
+
+    <p>
+    <li style="font-size: 16px">Do not refresh the page.</li>
+    <li style="font-size: 16px">Maximum image size: 1024Kb.</li>
+    <li style="font-size: 16px">Developed by <a href="https://github.com/alirezajavadi/">Alireza Javadi :)</a></li>
+    </p>
+
+
+</div>
